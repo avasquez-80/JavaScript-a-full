@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de descuento de productos | Segunda clase practica en Platzi</title>
+</head>
+<body>
+    <script src="./descuento.js"></script>
+    <section>
+        <h1>Calculo de descuento de productos</h1>
+        <form>
+            <div>
+                <label for="precioP">Ingresa el precio del producto</label>
+                <input type="number" id="precioP">
+            </div>
+            <div>
+                <label for="descuentoP">Ingresa el porcentaje de descuento</label>
+                <input type="number" id="descuentoP">
+            </div>
+            <button type="button" onclick="calcDesc()">Calcular precio con descuento</button>
+            <p id="resultadoP"></p>
+            <label for="selector">Selecciona tu cupon de descuento</label>
+            <select name="ejemplo" id="selector">
+                <option value="0">Nega Cupon</option>
+                <option value="10">El peji Cupon</option>
+                <option value="15">Cupon para usuarios frecuentes</option>
+                <option value="25">Cupon para usuarios VIP</option>
+            </select>
+        </form>
+    </section>
+</body>
+</html>

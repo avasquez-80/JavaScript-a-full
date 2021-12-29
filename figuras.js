@@ -44,11 +44,36 @@ function ladosTriangulo(ladoTriangulo1, ladoTriangulo2, baseTriangulo) {
 function perimetroTriangulo(baseTriangulo, ladoTriangulo1, ladoTriangulo2) {
     return baseTriangulo + ladoTriangulo1 + ladoTriangulo2;
 }
+function calcularPerimetroT(){
+    const ladoA=Number(document.getElementById("InputLadoA").value);
+    const ladoB=Number(document.getElementById("InputLadoB").value);
+    const BaseT=Number(document.getElementById("InputBaseT").value);
+    const perimetro=perimetroTriangulo(BaseT,ladoA,ladoB);
+    const altura=alturaTriangulo(BaseT,ladoA,ladoB);
+    alert(`La altura del triangulo es: ${altura}cm`);
+    console.log(perimetro);
+    alert(`El perimetro del triangulo es: ${perimetro}cm`);
+}
 // const areaTriangulo = (baseTriangulo * alturaTriangulo)/2;
 function areaTriangulo(baseTriangulo, alturaTriangulo) {
     return (baseTriangulo * alturaTriangulo) / 2;
 }
+function calcularAreaT(){
+    const BaseT=Number(document.getElementById("InputBaseT").value);
+    const AlturaT=Number(document.getElementById("InputAlturaT").value);
+    const area=areaTriangulo(BaseT,AlturaT);
+    alert(`El area del triangulo es: ${area}cm^2`);
+}
 // console.log(`El area del triangulo mide: ${areaTriangulo}cm^2`);
+function alturaTriangulo(baseTriangulo, ladoTriangulo1, ladoTriangulo2) {
+    if(ladoTriangulo1==ladoTriangulo2){
+        alert("El triangulo es de tipo isoceles");
+        return Math.sqrt(ladoTriangulo1**2-(baseTriangulo**2/4));
+    }
+    else{
+        return alert("El triangulo es de tipo escaleno");
+    }
+}
 console.groupEnd;
 
 //Calculo circulo
@@ -65,6 +90,11 @@ function radioCirculo(radioCirculo) {
 function diametroCirculo(radioCirculo) {
     return radioCirculo * 2;
 }
+function calcularDiametroCir(){
+    const radio=document.getElementById("InputRadio").value;
+    const diametro=diametroCirculo(radio);
+    alert(`El diametro del circulo es: ${diametro}cm`);
+}
 //Pi
 // const pi = Math.PI;
 // console.log(`El valor de pi es: ${pi}`);
@@ -78,10 +108,20 @@ function circunferenciaCirculo(radioCirculo) {
     const diametroC = diametroCirculo(radioCirculo);
     return diametroC * pi();
 }
+function calcularCircunferenciaCir(){
+    const radio=document.getElementById("InputRadio").value;
+    const circunferencia=circunferenciaCirculo(radio);
+    alert(`La circunferencia del circulo es: ${circunferencia}cm`);
+}
 //Area
 // const areaCirculo = pi * (radioCirculo ** 2);
 // console.log(`El area del circulo mide: ${areaCirculo}cm^2`);
 function areaCirculo(radioCirculo) {
     return pi() * (radioCirculo ** 2);
+}
+function calcularAreaCir(){
+    const radio=document.getElementById("InputRadio").value;
+    const area=areaCirculo(radio);
+    alert(`El area del circulo es: ${area}cm^2`);
 }
 console.groupEnd;

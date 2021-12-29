@@ -4,20 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./figuras.css">
     <title>Curso de figuras geometricas | Platzi</title>
 </head>
 <body>
-    <header>
-        <h1>Calculo de figuras geometricas</h1>
-    </header>
-    <section>
-        <h2>Curso practico Platzi</h2>
-        <form>
-            <label for="InputCuadrado">Ingresa el valor de un lado del cuadrado</label>
-            <input type="number" id="InputCuadrado">
-            <button type="button" onclick="calcularPerimetroC()">Calculo perimetro</button>
-            <button type="button" onclick="calcularAreaC()">Calculo area</button>
-        </form>
+    <section class="pagina">
+        <header>
+            <h1>Calculo de figuras geometricas</h1>
+        </header>
+        <section>
+            <h2>Curso practico Platzi</h2>
+            <form class="cuadrado">
+                <div>
+                    <label for="InputCuadrado">Ingresa el valor de un lado del cuadrado</label>
+                    <input type="number" id="InputCuadrado">
+                </div>
+                <button type="button" onclick="calcularPerimetroC()">Calculo perimetro</button>
+                <button type="button" onclick="calcularAreaC()">Calculo area</button>
+            </form>
+            <form class="triangulo">
+                <div>
+                    <label for="InputLadoA">Ingresa el valor del lado A del triangulo</label>
+                    <input type="number" id="InputLadoA">   
+                </div>
+                <div>
+                    <label for="InputLadoB">Ingresa el valor del lado B del triangulo</label>
+                    <input type="number" id="InputLadoB">
+                </div>
+                <div>
+                    <label for="InputBaseT">Ingresa el valor de la base del triangulo</label>
+                    <input type="number" id="InputBaseT">
+                </div>
+                <div>
+                    <label for="InputAlturaT">Ingresa el valor de la altura del triangulo</label>
+                    <input type="number" id="InputAlturaT">
+                </div>
+                <button type="button" onclick="calcularPerimetroT()">Calculo perimetro y altura</button>
+                <button type="button" onclick="calcularAreaT()">Calculo area</button>
+            </form>
+            <form class="circulo">
+                <div>
+                    <label for="InputRadio">Ingresa el valor del radio del circulo</label>
+                    <input type="number" id="InputRadio">
+                </div>
+                <button type="button" onclick="calcularDiametroCir()">Calculo diametro</button>
+                <button type="button" onclick="calcularCircunferenciaCir()">Calculo circunferencia</button>
+                <button type="button" onclick="calcularAreaCir()">Calculo area</button>
+            </form>
+        </section>
     </section>
     <script src="./figuras.js"></script>
 </body>
